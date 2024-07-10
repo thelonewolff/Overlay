@@ -21,7 +21,8 @@ def overlay_image():
     overlay_image = Image.open(BytesIO(response.content)).convert("RGBA")
 
     # Open the background image
-    background_image = Image.open("background.png").convert("RGBA")
+    response1 = requests.get('https://i.postimg.cc/J4dfncNx/background.png')
+    background_image = Image.open(BytesIO(response1.content)).convert("RGBA")
 
     # Calculate the position to paste the overlay (top-left corner)
     position = (0, 0)

@@ -1,0 +1,3 @@
+curl -X POST -F "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=Example" http://127.0.0.1:5000/overlay --output result.jpg
+
+pip install pandas openpyxl requests pillow simple_salesforce
